@@ -1,0 +1,12 @@
+.height-visible {
+  padding-top: 1.5rem;
+  height: 12rem;
+}
+
+.height-hidden {
+  height: 0;
+}
+
+.navbar-sm {
+    transition-duration: 0.5s;
+}

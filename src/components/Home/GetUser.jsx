@@ -1,0 +1,1 @@
+export const ById = (id) => document.querySelector(id); 

@@ -1,0 +1,19 @@
+.cursor-tracker {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  .cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff5722; /* You can customize the color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Add your styles for the beautiful element here */
+  
