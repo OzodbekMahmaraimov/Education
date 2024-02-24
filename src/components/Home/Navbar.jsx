@@ -54,7 +54,7 @@ const Navbar = () => {
                 {localStorage.getItem("checkout") ? "" :
                   <Link to="/login"><button className="duration-300 scale-9 md:scale-1 py-3 sm:px-8 lg:px-14 whitespace-nowrap bg-[transparent] text-white rounded-[3rem] border-white border-2 active:scale-90">Login</button></Link>}
                 <Link to="/started"><button className="duration-300 py-3 sm:px-6 lg:px-10 whitespace-nowrap text-white bg-tugmaColor rounded-[3rem] active:scale-90">Get Started</button></Link>
-                {localStorage.getItem("checkout") && <img onClick={openProfile} className="w-11 cursor-pointer rounded-full" src={localStorage.getItem("imageDataUrl")} alt="profile img" />}
+                {localStorage.getItem("checkout") && <img onClick={openProfile} className="w-11 cursor-pointer rounded-full" src={localStorage.getItem("imageDataUrl") ? localStorage.getItem("imageDataUrl") : "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="} alt="profile img" />}
                 <div onClick={(e) => closePofile(e)} className={`flex-col justify-between absolute w-[9rem] h-[3rem] top-8 right-7 rounded-lg bg-white ${profile ? "flex" : "hidden"}`}>
                   <Link to="/profile" className="w-full text-center py-auto border-[#8338ec] border-b-[0.2px] cursor-pointer h-full flex justify-center items-center gap-2">Open Profile</Link>
                 </div>
