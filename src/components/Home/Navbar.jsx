@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import OnlineEducation from "./images/Online Education.svg";
 import { FaList } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -7,8 +7,6 @@ import './main.scss'
 import { ById } from "./GetUser";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { RxAvatar } from "react-icons/rx";
-// import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
