@@ -34,9 +34,10 @@ const Navbar = () => {
                   <li><Link className="text-xl" to='/contact'>Contact</Link></li>
                 </ul>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <Link to="/login"><button className="duration-300 scale-9 md:scale-1 py-3 sm:px-8 lg:px-14 whitespace-nowrap bg-[transparent] text-white rounded-[3rem] border-white border-2 active:scale-90">Login</button></Link>
                 <Link to="/started"><button className="duration-300 py-3 sm:px-6 lg:px-10 whitespace-nowrap text-white bg-tugmaColor rounded-[3rem] active:scale-90">Get Started</button></Link>
+                <h1 className="text-xl">Profile</h1>
               </div>
             </div>
 

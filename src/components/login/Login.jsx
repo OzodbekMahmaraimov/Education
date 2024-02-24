@@ -47,7 +47,7 @@ const Login = () => {
             <div className='flex flex-col gap-2'>
               <label className='font-normal	text-xl text-white' htmlFor="password">Password</label>
               <div class="relative">
-                <input type={eye ? "password" : "text"} id="password" className="ps-4 py-3 rounded-lg w-full outline-cyan-500" placeholder="name@flowbite.com" />
+                <input type={eye ? "text" : "password"} id="password" className="ps-4 py-3 rounded-lg w-full outline-cyan-500" placeholder="name@flowbite.com" />
                 <div onClick={eying} className="absolute inset-y-0 end-5 flex items-center ps-3.5 cursor-pointer">
                   {eye ? <FaRegEye className='text-xl' color='#C7D2D6' /> : <FaRegEyeSlash className='text-xl' color='#C7D2D6' />}
                 </div>
