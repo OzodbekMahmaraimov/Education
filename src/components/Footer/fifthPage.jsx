@@ -9,16 +9,17 @@ import instagram from './images/instagram.svg';
 import Be from './images/be.svg';
 import yer from './images/yer.svg';
 import { styles } from "../util/style";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FifthPage = () => {
   return (
     <>
       <section className="w-[100%] flex flex-col items-center justify-center bg-gradient-to-b from-footerColorS to-footerColorE mt-[6rem]">
-        <div className="container xl:w-[79%] grid md:grid-cols-8 pt-16 pb-12 md:gap-12 gap-8">
+        <div className="container px-2 md:px-0 xl:w-[79%] grid md:grid-cols-8 pt-16 pb-12 md:gap-12 gap-8">
           <div className="col-span-3 flex flex-col gap-10">
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <button className={`${styles.tugma} p-2`}>
-                <img src={education} alt="Online Education Icon" />
+                <LazyLoadImage src={education} alt="Online Education Icon" effect="blur" />
               </button>
               <h1 className="text-5xl text-white">Edujar</h1>
             </div>
@@ -32,8 +33,8 @@ const FifthPage = () => {
             </div>
           </div>
           <div className="col-span-2 grid">
-            <h3 className="text-3xl ps-5 text-white">Quick Links</h3>
-            <div className="grid grid-cols-2 ps-5">
+            <h3 className="text-3xl text-white">Quick Links</h3>
+            <div className="grid grid-cols-2">
               <p
                 className={`${styles.paragraph} text-footerPColor cursor-pointer`}
               >
@@ -53,8 +54,8 @@ const FifthPage = () => {
             </div>
           </div>
           <div className="col-span-3 grid">
-            <h3 className="text-3xl ps-5 text-white">Contact Us</h3>
-            <div className="grid ps-5">
+            <h3 className="text-3xl text-white">Contact Us</h3>
+            <div className="grid">
               <div className="flex gap-5 items-center">
                 <img className="w-5" src={phone} alt="Phone icon" />
                 <p className={`${styles.paragraph} text-footerPColor`}> (209) 555-0104</p>
@@ -70,7 +71,7 @@ const FifthPage = () => {
             </div>
           </div>
         </div>
-        <div className="container xl:w-[79%]">
+        <div className="container px-2 md:px-0 xl:w-[79%]">
           <hr className="w-[100%] h-[1rem] text-chiziq"/>
           <div className="flex md:flex-row flex-col md:gap-0 gap-5 justify-between w-[100%] py-5">
             <p className={`${styles.paragraph} text-footerPColor`}>Copyright 2023 | All Rights Reserved</p>

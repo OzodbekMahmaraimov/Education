@@ -9,6 +9,7 @@ import ellipse5 from './images/Ellipse 1206.png';
 import ellipse6 from './images/Ellipse 1207.png';
 import ellipse7 from './images/Ellipse 1208.png';
 import { styles } from "../util/style";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ThirdPge = () => {
   
@@ -20,11 +21,11 @@ const ThirdPge = () => {
         <h1 className="text-6xl mx-auto text-white text-center py-[4rem]">
           Testimonials
         </h1>
-        <div className="container mx-auto xl:w-[79%] grid grid-cols-6 md:gap-0 gap-10">
+        <div className="container px-2 md:px-0 mx-auto xl:w-[79%] grid grid-cols-6 md:gap-0 gap-10">
           <div className="flex md:col-span-4 col-span-6 flex-col gap-7 px-7 py-12 bg-testimonial border-2 border-solid border-borderC rounded-lg overflow-hidden">
             <div className="w-[100%] flex md:flex-row flex-col-reverse justify-between">
               <div className="flex gap-4">
-                <img className="w-[3rem] h-[3rem]" src={ellipse1} alt="..." />
+                <LazyLoadImage className="w-[3rem] h-[3rem]" src={ellipse1} alt="..." effect="blur" />
                 <div>
                   <h1 className="text-testimonialText text-3xl">Adam Smith</h1>
                   <p className="text-footerPColor">Python Developer</p>
@@ -66,14 +67,14 @@ const ThirdPge = () => {
           </div>
 
           <div className="flex md:col-span-2 gap-6 col-span-6 flex-col items-center justify-evenly ">
-            <img className="w-[7rem]" src={ellipse5} alt="..." />
+            <LazyLoadImage effect="blur" className="w-[7rem]" src={ellipse5} alt="..." />
             <div className="w-[50%] flex flex-row justify-between">
-              <img className={styles.images} src={ellipse4} alt="..." />
-              <img className={styles.images} src={ellipse3} alt="..." />
+              <LazyLoadImage className={styles.images} src={ellipse4} alt="..." effect="blur" />
+              <LazyLoadImage className={styles.images} src={ellipse3} alt="..." effect="blur" />
             </div>
             <div className="w-[50%] flex flex-row justify-between">
-              <img className={styles.images} src={ellipse6} alt="..." />
-              <img className={styles.images} src={ellipse7} alt="..." />
+            <LazyLoadImage className={styles.images} src={ellipse6} alt="..." effect="blur" />
+            <LazyLoadImage className={styles.images} src={ellipse7} alt="..." effect="blur" />
             </div>
             {/* <img src={ellipse7} alt="..." /> */}
           </div>

@@ -48,7 +48,7 @@ const FourthPage = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-x-1 gap-y-6">
+                    <div className="w-full mt-10 px-2 md:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-x-1 gap-y-6">
                         {course === 'design' && kurslarDesign.map((item, idx) => (
                             <Card key={idx} job="design" image={item.image} />
                         ))}

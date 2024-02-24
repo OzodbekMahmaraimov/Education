@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/login/Login';
 import Started from './components/getStarted/Started';
 import Contact from './components/contact/Contact';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -6,11 +6,12 @@ import Cap from './images/GraduationCap.png';
 import Video from './images/VideoCamera.png';
 import Users from './images/UsersThree.png';
 import Insturement from "./Insturement";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SecondPage = () => {
   return (
     <section id="about" className="w-100">
-      <div className="container mx-auto xl:w-[79%] grid grid-cols-1 gap-x-5 gap-y-5 lg:mt-[7rem] mt-[5rem] sm:grid-cols-2 md:grid-cols-3">
+      <div className="container mx-auto px-2 md:px-0 xl:w-[79%] grid grid-cols-1 gap-x-5 gap-y-5 lg:mt-[7rem] mt-[5rem] sm:grid-cols-2 md:grid-cols-3">
         <div className="flex flex-col gap-y-5 justify-center lg:justify-start">
           <h1 className={`${styles.footerText} `}>
             What is our <span className="text-fTextColor">differnce</span>
@@ -30,7 +31,7 @@ const SecondPage = () => {
         </div>
         <div>
           <div className="avatar bg-avatarBg rounded-full">
-            <img className="py-3 sm:w-full" src={avatar} alt="..." />
+            <LazyLoadImage className="py-3 sm:w-full" src={avatar} alt="..." effect="blur" />
           </div>
         </div>
         <div className="flex flex-col items-center justify-start lg:justify-center">

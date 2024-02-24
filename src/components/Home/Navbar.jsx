@@ -5,6 +5,7 @@ import './Navbar.css'
 import './main.scss'
 import { ById } from "./GetUser";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
           <div className="container max-w-[1300px]  mx-auto py-5">
             <div className="hidden gap-2 flex-row justify-between items-center lg:flex">
               <div className="flex gap-1 items-center lg:gap-3">
-                <button className="bg-tugmaColor py-1 px-2 rounded-xl"><img src={OnlineEducation} alt="Online Education" /></button>
+                <button className="bg-tugmaColor py-1 px-2 rounded-xl"><LazyLoadImage effect="blur" src={OnlineEducation} alt="Online Education logo" /></button>
                 <h1 className="lg:text-4xl sm:text-2xl text-white">Edujar</h1>
               </div>
               <div>
@@ -40,7 +41,7 @@ const Navbar = () => {
             </div>
 
             <div class="block lg:hidden" id="mobile-menu">
-              <div className="w-[100%] flex items-center justify-between">
+              <div className="w-[100%] flex items-center justify-between px-4">
                 <div className="flex gap-1 items-center lg:gap-3">
                   <button className="bg-tugmaColor py-1 px-2 rounded-xl"><img src={OnlineEducation} alt="Online Education" /></button>
                   <h1 className="text-3xl text-white">Edujar</h1>

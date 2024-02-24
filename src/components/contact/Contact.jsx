@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className='w-full h-screen flex items-center'>
+            <section className='w-full md:h-screen h-auto flex items-center bg-[#2C1F4A]'>
                 <div className='w-[70rem] lg:h-[37rem] md:h-[30rem] h-[50rem] flex md:flex-row flex-col bg-contact gap-8 md:gap-0 xl:gap-0 lg:gap-5 mx-auto py-5 px-8 rounded-[1rem]'>
                     <div className='md:w-[50%] w-[90%] mx-auto flex flex-col justify-around gap-8'>
                         <h1 className='text-white text-5xl md:text-4xl lg:text-5xl font-semibold leading-[3.5rem]'>Let’s discuss
@@ -18,15 +18,15 @@ const Contact = () => {
                         <div className='flex flex-col gap-2 md:gap-5'>
                             <div className='flex items-center w-[60%] cursor-pointer gap-4 border-2 border-contact duration-300 transition-all hover:bg-contactPhone hover:border-contactB py-2 md:px-4 px-0 rounded-xl'>
                                 <img className='w-[1rem]' src={message} alt="message img" />
-                                <h4 className='text-lg text-white text-xl md:text-lg'>SaulDesign@gmail.com</h4>
+                                <h4 className=' text-white text-xl md:text-lg'>SaulDesign@gmail.com</h4>
                             </div>
                             <div className='flex items-center w-[60%] cursor-pointer gap-4 border-2 border-contact duration-300 transition-all hover:bg-contactPhone hover:border-contactB py-2 md:px-4 px-0 rounded-xl'>
                                 <img className='w-[1rem]' src={call} alt="call img" />
-                                <h4 className='text-lg text-white text-xl md:text-lg'>+123 456 789</h4>
+                                <h4 className=' text-white text-xl md:text-lg'>+123 456 789</h4>
                             </div>
                             <div className='flex items-center w-[60%] cursor-pointer gap-4 border-2 border-contact duration-300 transition-all hover:bg-contactPhone hover:border-contactB py-2 md:px-4 px-0 rounded-xl'>
                                 <img className='w-[1rem]' src={place} alt="place img" />
-                                <h4 className='text-lg text-white text-xl md:text-lg whitespace-nowrap'>123 Street 456 House</h4>
+                                <h4 className=' text-white text-xl md:text-lg whitespace-nowrap'>123 Street 456 House</h4>
                             </div>
                         </div>
                         <div className='flex ms-0 md:ms-5 items-center gap-5'>

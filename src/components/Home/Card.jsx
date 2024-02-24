@@ -2,13 +2,15 @@ import React from 'react'
 import button from './images/Polygon 4.png'
 import girl from './images/girl.png'
 import stars from './images/stars.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Card = ({ image, job }) => {
   return (
     <div>
-      <div class="mx-auto max-w-sm overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-testimonial dark:border-gray-700">
-        <img class="rounded-t-lg cursor-pointer duration-300 hover:scale-105" src={image} alt="laptop 1" />
-        <div class="p-5 flex flex-col gap-5">
+      <div className="mx-auto max-w-sm overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-testimonial dark:border-gray-700">
+        {/* <img className="rounded-t-lg cursor-pointer duration-300 hover:scale-105" src={image} alt="laptop 1" /> */}
+        <LazyLoadImage effect='blur' className='rounded-t-lg cursor-pointer' src={image} alt='laptops' />
+        <div className="p-5 flex flex-col gap-5">
           <div className='w-100 flex text-testimonialText justify-between'>
             <div className='flex items-center gap-3'>
               <button className='bg-tugmaColor p-3 rounded-full'><img src={button} alt="buttondagi_Imgae" /></button>

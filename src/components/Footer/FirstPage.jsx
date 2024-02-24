@@ -18,7 +18,7 @@ const FirstPage = () => {
       </div>
       {/* Most */}
       <h1 className='text-6xl text-white text-center py-[4rem]'>Most Popular <span className='text-fTextColor'>Category</span> </h1>
-      <div className="container xl:w-[79%] sm:w-full grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-6">
+      <div className="container xl:w-[79%] px-2 md:px-0 sm:w-full grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-6">
         <Most icon={Pen} text={'Design'} />
         <Most icon={Layers} text={'Development'} />
         <Most icon={Paper} text={'Professional Dev.'} />
