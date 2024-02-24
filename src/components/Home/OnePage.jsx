@@ -22,7 +22,7 @@ const OnePage = () => {
             </p>
             <form className="xl:w-[75%] w-[90%] py-2 px-5 rounded-[3rem] bg-white flex justify-around sm:justify-between items-center" action="">
               <input className="border-0 outline-none py-3 w-[70%]" type="text" placeholder="🔍Want to learn" />
-              <input onClick={handleSubmit} className={`${styles.tugma} py-3 px-6 md:px-10 rounded-[12rem] cursor-pointer`} type="submit" />
+              <input onClick={handleSubmit} className={`${styles.tugma} py-3 md:py-4 px-7 md:px-10 rounded-[12rem] cursor-pointer`} type="submit" />
             </form>
           </div>
           <div>
