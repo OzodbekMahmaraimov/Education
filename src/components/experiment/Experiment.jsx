@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 const Experiment = () => {
     const isCheckout = useSelector((state) => state.checkout);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch({ type: "checkout", checkout: true });
-    }, []);
+    dispatch({ type: "checkout", checkout: true });
 
     console.log(isCheckout);
 

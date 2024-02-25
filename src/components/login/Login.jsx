@@ -15,8 +15,6 @@ const Login = () => {
 
   const [eye, setEye] = useState(false);
   const [login, setLogin] = useState(false);
-  const [image, setImage] = useState(null);
-  // const dispatch = useDispatch();
 
   const eying = () => setEye(!eye);
 
@@ -26,7 +24,6 @@ const Login = () => {
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        setImage(reader.result);
         localStorage.setItem('imageDataUrl', reader.result); // Save image data URL to localStorage
       };
       reader.readAsDataURL(file);
