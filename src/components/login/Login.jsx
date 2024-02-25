@@ -8,7 +8,6 @@ import { byId } from '../Url';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
 
 const Login = () => {
   localStorage.setItem("checkout", false)
@@ -28,20 +27,21 @@ const Login = () => {
       };
       reader.readAsDataURL(file);
     }
+    localStorage.setItem("name",  byId("name"))
+    localStorage.setItem("job",  byId("job"))
   };
 
   const loginIn = () => {
     openImage();
     setLogin(true);
     axios.post("https://jsonplaceholder.typicode.com/users", {
-      name: byId('email'),
-      email: byId("password"),
+      name: byId('name'),
+      email: byId("job"),
     })
       .then(res => {
         setLogin(false);
         toast.success("Siz ro'yxatdan o'tdingiz");
         document.querySelector("#checkout").click()
-        // dispatch({ type: "checkout", checkout: true });
         localStorage.setItem("checkout", true)
       })
       .catch(res => {
@@ -54,7 +54,7 @@ const Login = () => {
     toast.warning("Kechirasiz, ammo bu funksiya hozircha ishlamaydi.");
   };
 
-  
+
   return (
     <>
       <section className='w-full h-screen login flex items-center'>
@@ -63,17 +63,14 @@ const Login = () => {
             <h1 className='text-4xl text-white font-bold text-center sm:text-left'>Sign Up</h1>
 
             <div className='flex flex-col gap-2'>
-              <label className='font-normal	text-xl text-white' htmlFor="email">Email</label>
-              <input className='py-3 px-4 rounded-[0.5rem] outline-cyan-500' type="email" id='email' placeholder='username@gmail.com' />
+              <label className='font-normal	text-xl text-white' htmlFor="email">Name</label>
+              <input className='py-3 px-4 rounded-[0.5rem] outline-cyan-500' type="name" id='name' placeholder='Enter your name  ' />
             </div>
 
             <div className='flex flex-col gap-2'>
-              <label className='font-normal	text-xl text-white' htmlFor="password">Create Password</label>
+              <label className='font-normal	text-xl text-white' htmlFor="job">Job</label>
               <div className="relative">
-                <input type={eye ? "text" : "password"} id="password" className="ps-4 py-3 rounded-lg w-full outline-cyan-500" placeholder="password" />
-                <div onClick={eying} className="absolute inset-y-0 end-5 flex items-center ps-3.5 cursor-pointer">
-                  {eye ? <FaRegEye className='text-xl' color='#C7D2D6' /> : <FaRegEyeSlash className='text-xl' color='#C7D2D6' />}
-                </div>
+                <input type="text" id="job" className="ps-4 py-3 rounded-lg w-full outline-cyan-500" placeholder="Enter Your Job" />
               </div>
             </div>
             <div className='flex flex-col gap-2'>
