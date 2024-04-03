@@ -10,7 +10,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Experiment from "./components/experiment/Experiment";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import Profile from './components/profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,7 +21,6 @@ root.render(
         <Route path="/started" Component={Started} />
         <Route path="/contact" Component={Contact} />
         <Route path="/sinov" Component={Experiment} />
-        <Route path="/profile" Component={Profile} />
       </Routes>
     </Provider>
   </BrowserRouter>

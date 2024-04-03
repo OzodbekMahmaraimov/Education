@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className='w-full md:h-screen h-auto flex items-center bg-[#2C1F4A]'>
+            <section className='w-full h-[60rem] md:h-screen flex md:items-center bg-[#2C1F4A]'>
                 <div className='w-[70rem] lg:h-[37rem] md:h-[30rem] h-[50rem] flex md:flex-row flex-col bg-contact gap-8 md:gap-0 xl:gap-0 lg:gap-5 mx-auto py-5 px-8 rounded-[1rem]'>
                     <div className='md:w-[50%] w-[90%] mx-auto flex flex-col justify-around gap-8'>
                         <h1 className='text-white text-5xl md:text-4xl lg:text-5xl font-semibold leading-[3.5rem]'>Let’s discuss

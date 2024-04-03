@@ -15,19 +15,14 @@ const Navbar = () => {
   const openProfile = () => setProfile(!profile);
 
   const closePofile = (e) => {
-    if(e.target === document.querySelector("#openProfile")) {
+    if (e.target === document.querySelector("#openProfile")) {
       openProfile()
     }
   }
 
   const openNavbar = () => {
     setNavbar(!navbar);
-    ById('.navbar-sm').classList.add(navbar ? 'height-visible' : 'height-hidden')
-    ById('.navbar-sm').classList.remove(navbar ? 'height-hidden' : 'height-visible')
   }
-
-  // const isCheckout = useSelector((state) => state.checkout);
-  // console.log(isCheckout);
 
   return (
     <>
@@ -52,9 +47,10 @@ const Navbar = () => {
                 {localStorage.getItem("checkout") ? "" :
                   <Link to="/login"><button className="duration-300 scale-9 md:scale-1 py-3 sm:px-8 lg:px-14 whitespace-nowrap bg-[transparent] text-white rounded-[3rem] border-white border-2 active:scale-90">Login</button></Link>}
                 <Link to="/started"><button className="duration-300 py-3 sm:px-6 lg:px-10 whitespace-nowrap text-white bg-tugmaColor rounded-[3rem] active:scale-90">Get Started</button></Link>
-                {localStorage.getItem("checkout") && <img onClick={openProfile} className="w-11 cursor-pointer rounded-full" src={localStorage.getItem("imageDataUrl") ? localStorage.getItem("imageDataUrl") : "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="} alt="profile img" />}
-                <div onClick={(e) => closePofile(e)} className={`flex-col justify-between absolute w-[9rem] h-[3rem] top-8 right-7 rounded-lg bg-white ${profile ? "flex" : "hidden"}`}>
-                  <Link to="/profile" className="w-full text-center py-auto border-[#8338ec] border-b-[0.2px] cursor-pointer h-full flex justify-center items-center gap-2">Open Profile</Link>
+                {localStorage.getItem("checkout") && <LazyLoadImage effect="blur" onClick={openProfile} className="w-11 cursor-pointer rounded-full" src={localStorage.getItem("imageDataUrl") ? localStorage.getItem("imageDataUrl") : "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="} alt="profile img"  />}
+                <div onClick={(e) => closePofile(e)} className={`flex-col justify-between absolute w-[9rem] h-[4rem] top-8 right-7 rounded-lg bg-white ${profile ? "flex" : "hidden"}`}>
+                  <h1 className="text-center text-2xl avatar-name">{localStorage.getItem("name")}</h1>
+                  <h1 className="text-center avatar-job">{localStorage.getItem("job")}</h1>
                 </div>
               </div>
             </div>
@@ -65,11 +61,11 @@ const Navbar = () => {
                   <button className="bg-tugmaColor py-1 px-2 rounded-xl"><img src={OnlineEducation} alt="Online Education" /></button>
                   <h1 className="text-3xl text-white">Edujar</h1>
                 </div>
-                <div>{!navbar ? <IoMdClose onClick={openNavbar} className="text-4xl text-white" /> :
+                <div>{navbar ? <IoMdClose onClick={openNavbar} className="text-4xl text-white" /> :
                   <FaList onClick={openNavbar} className="text-4xl text-white" />}
                 </div>
               </div>
-              <div className="space-y-1 navbar-sm height-hidden overflow-hidden">
+              <div className={`space-y-1 navbar-sm overflow-hidden ${navbar ? "height-visible" : "height-hidden"}`}>
                 <a href="#home" className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page" >
                   Home
                 </a>
@@ -91,6 +87,9 @@ const Navbar = () => {
                 >
                   blog
                 </a>
+                <Link className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" to='/contact'>Contact</Link>
+                {localStorage.getItem("checkout") ? "" :
+                  <Link to="/login"><button className="duration-300 scale-9 md:scale-1 py-3 sm:px-8 lg:px-14 whitespace-nowrap bg-[transparent] text-white rounded-[3rem] border-white border-2 active:scale-90">Login</button></Link>}
               </div>
             </div>
           </div>

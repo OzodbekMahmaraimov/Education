@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaFacebook } from "react-icons/fa";
 import './login.css';
@@ -12,10 +11,7 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   localStorage.setItem("checkout", false)
 
-  const [eye, setEye] = useState(false);
   const [login, setLogin] = useState(false);
-
-  const eying = () => setEye(!eye);
 
   const openImage = () => {
     const fileInput = document.querySelector("#file_input");
@@ -57,8 +53,8 @@ const Login = () => {
 
   return (
     <>
-      <section className='w-full h-screen login flex items-center'>
-        <div className='w-[630px] h-[600px] backdrop-blur-md mx-auto bg-login flex items-center rounded-[2rem]'>
+      <section className='w-full h-screen login flex items-center justify-center'>
+        <div className='w-[630px] h-[600px] backdrop-blur-md bg-login flex items-center rounded-[2rem] mx-2 md:mx-0'>
           <div className='flex flex-col gap-7 mx-auto w-[90%] sm:w-[80%] h-[88%]'>
             <h1 className='text-4xl text-white font-bold text-center sm:text-left'>Sign Up</h1>
 
